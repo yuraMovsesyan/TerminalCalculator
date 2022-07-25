@@ -48,4 +48,10 @@ class Lexer{
 
         tokens += [Token(value: buffer, type: type!)]
     }
+
+    func printTokens(){
+        for token in tokens{
+            print("['\(token.value)']\t[\(token.typeToken)]")
+        }
+    }
 }

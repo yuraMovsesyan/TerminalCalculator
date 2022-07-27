@@ -32,10 +32,7 @@ class Lexer{
             switch s {
                 case "0"..."9": setType(Token.type.number)
 
-                case "+": setType(Token.type.operation)
-                case "-": setType(Token.type.operation)
-                case "*": setType(Token.type.operation)
-                case "/": setType(Token.type.operation)
+                case let opr where Operation.isOperation(opr): setType(Token.type.operation)
 
                 case "(": setType(Token.type.bracket)
                 case ")": setType(Token.type.bracket)

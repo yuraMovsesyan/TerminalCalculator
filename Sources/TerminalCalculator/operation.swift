@@ -29,6 +29,10 @@ class Operation{
         return nil
     }
 
+    static func getPriority(_ opr: Character) -> Int{
+        return getOperation(opr)!.priority
+    }
+
     static func calculate (opr: Character, a: Double, b: Double) -> Double?{
         if let operation = getOperation(opr){
             return operation.getResult(a, b)

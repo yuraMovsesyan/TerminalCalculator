@@ -15,7 +15,7 @@ class Operation{
 
     static let operations: [OperationType] = [
         OperationType(symbol: "+", priority: 1, getResult: {(a: Double, b: Double) -> Double in return a + b}),
-        OperationType(symbol: "-", priority: 1, getResult: {(a: Double, b: Double) -> Double in return b - a}),
+        OperationType(symbol: "-", priority: 1, getResult: {(a: Double, b: Double) -> Double in return a - b}),
         OperationType(symbol: "*", priority: 2, getResult: {(a: Double, b: Double) -> Double in return a * b}),
         OperationType(symbol: "/", priority: 2, getResult: {(a: Double, b: Double) -> Double in return b / a})
     ]

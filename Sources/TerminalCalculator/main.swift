@@ -10,4 +10,8 @@ if CommandLine.arguments.count == 1{
     }
 }
 
-print (Calculator.calculate(tokens: (Lexer(line: arguments)).getTokens()))
+let lexer = Lexer(line: arguments)
+
+let pr = Processing(tokens: lexer.getTokens())
+
+print (Calculator.calculate(tokens: pr.getTokens()))
